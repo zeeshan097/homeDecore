@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .topnav{background-color: rgb(255, 106, 95);overflow: hidden;border-radius: 15px;position:fixed;width: 99%;z-index: 1;max-width: 100%;height:30%;}
+        .topnav a{float: right;font-size: 2vw;text-decoration: none;display: block;text-align: center;padding:1px 16px; color: white;z-index: 1;}
+        .row{padding-top: 5%;position: fixed;width: 100%;z-index: 1;display: flex;}
+
+        .search{float: left;width: 70%;background-color: rgb(248, 221, 221);padding-left: 2%;}
+        .search input[type=search]
+            {background-image: url('ser.svg');background-repeat: no-repeat;background-position: 560px 3px;}
+        
+            .leftside{float: left;width: 20%;}
+        .row::after{content: "";display: table;clear: both;}
+        
+        .dropdown{display: inline-block;position: relative;padding-left: 4px;padding-top: 3.3%;}
+        .dropdown-content{position: absolute;display: none;background-color: whitesmoke;min-width: 120px;
+                            box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);padding: 10px 10px;z-index: 1;}
+        .dropdown:hover .dropdown-content{display: block;}
+
+        .dropdown1{position: relative;}
+        .dropdown1-content{position: absolute;display: none;padding:10px ;}
+        .dropdown1:hover .dropdown1-content{display: block;z-index: 1;}
+        
+        div.relative{position: relative;}
+        div.absolute{position:absolute;
+                    right: 50.5%;
+                    top: 83.54%;
+                    width: 200px;
+                    height: 30px;
+                    text-align: center;
+                    font-size:larger;
+                    border: 1px solid rgb(226, 225, 225);
+                    opacity: -1;
+                    cursor: pointer;}
+
+        div.relative1{position: relative;padding-top: 4.2%;} 
+        div.absolute1{position:absolute;
+                    right: 14.5%;
+                    top: 66.8%;
+                    width: 110px;
+                    height: 25px;
+                    text-align: center;
+                    font-size:larger;
+                    border: 1px solid rgb(226, 225, 225);
+                    opacity: -1;
+                    cursor: pointer;}
+    
+        div.rotate:hover{transform: rotate(20deg);}
+
+        div.relative2{position: relative;} 
+        div.absolute2{position:absolute;
+                    right: 16.5%;
+                    top: 63%;
+                    width: 110px;
+                    height: 25px;
+                    text-align: center;
+                    font-size:larger;
+                    border: 1px solid rgb(226, 225, 225);
+                    opacity: -1;
+                    cursor: pointer;}
+        div.relative2:hover{background-color: rgb(19, 90, 170);opacity: 0.5;width: 105%;}
+   
+        
+        div.relative3{position: relative;padding-top: 10%;} 
+        div.absolute3{position:absolute;
+                    right: 40%;
+                    top: 41.3%;
+                    width: 170px;
+                    height: 25px;
+                    text-align: center;
+                    font-size:larger;
+                    border: 1px solid rgb(226, 225, 225);
+                    opacity: -1;
+                    cursor: pointer;}
+   
+        div.signup:hover{opacity: 0.7;}
+        div.leftside:hover{opacity: 0.6;}
+        div.instock:hover{background-color:rgb(255, 136, 0);opacity: 0.6;}
+        div.categories:hover{background-color:rgb(0, 2, 3);}
+        .pseudo-element::first-letter{font-size: 7vw;}
+        .ho:hover{opacity: 0.8;background-color: rgba(220, 220, 220, 0.349);}
+        div.img{margin: 5px;float: left;width: 40%;}
+        div.img:hover{background-color: gainsboro;opacity: 0.8;}
+        div.backimg{background-color:  rgba(248, 255, 234, 0.973);display: flex;}
+        #hover:hover{opacity: 0.8;}
+        div.overhover:hover{background-color: rgb(255, 238, 240);}
+        div.hovers:hover{opacity: 0.8;}
+        div.border{width: 50%;}
+        ul li.oho:hover{opacity: 0.8;}
+        
+        
+</style>
+
+
+</head>
+<body>
+
+    <div class="topnav">
+                <a style="padding-top: 20px;" href="https://blog.hometown.in/">Blog</a>
+                <a style="padding-top: 20px;" href=https://www.hometown.in/track-order">Track Order</a> 
+                <a style="float: left;" href="https://www.hometown.in/"> <img style="padding-top: 8px;padding-right: 10%;" src="homw towns.png" alt="home towns"></a>
+        
+                
+    </div>
+
+        <div class="row">        
+            <div class="leftside"> 
+                <a href="https://www.hometown.in/"> <img style="padding-top: 10px;padding-left: 15px;width: 70%;height: min-content;" src="hme.png" alt="home towns"></a>        
+            </div>
+            
+        
+            <div class="search" >
+                <a href=""><input style="width: 65%;height: 35px; border: 2px solid black;" type="search" name="search" id="" placeholder="search"></a>
+                <a style="text-decoration: none;" href="https://www.hometown.in/store-locator">
+                    <img style="width: 30px;padding-left: 10px;" src="locator.png" alt="locator">Store locator</a>
+               
+               <div class="dropdown" style="padding-left:2%;">
+                    <img class="signup" style="width: 30px;padding-left:10px;cursor: pointer;" src="sign_up-removebg-preview.png" alt="signup">
+                        <div class="dropdown-content">
+                            <a href="https://www.hometown.in/signup"><input style="background-color:black; color: white;border: none;border-radius: 5px;cursor: pointer;" type="button" value="SIGN UP"></a>
+                            <p>not a member yet?</p>
+                            <a href="https://www.hometown.in/login"><input style="background-color:black; color: white;border: none;border-radius: 5px;cursor: pointer;" type="button" value="LOG IN"></a>
+                        </div>
+                </div>
+          
+               
+                <div class="dropdown" style="padding-left: 2%;">
+                    <img style="width: 30px;padding-left: 10px;cursor: pointer;" src="heart1-removebg-preview.png" alt="heart">
+                    <div class="dropdown-content">
+                        <p>Already have a list</p>
+                        <a href="https://www.hometown.in/login"><input style="background-color:black; color: white;border: none;border-radius: 5px;cursor: pointer;" type="button" value="SIGN IN"></a>
+                    </div>
+               </div>
+               
+               
+               <div class="dropdown" style="padding-left: 2%;">
+                    <img style="width: 30px;padding-left: 10px;cursor: pointer;" src="cart.png" alt="cart">
+                    <div class="dropdown-content">
+                        <p>0 items in your cart</p>
+                        <hr>
+                        <h2>Subtotal Rs.</h2>
+                        <a href="https://www.hometown.in/checkout/cart"><input style="background-color:black; color: white;border: none;border-radius: 5px;cursor: pointer;"type="button" value="VIEW CART"></a>
+                    </div>
+                </div>
+
+                
+             </div>
+        </div>
+
+        <div style="display: inline-flex;padding-top: 15%;">
+            <div class="dropdown1">
+            <ul>
+            <button style="font-size: 1.5vw;border: none;background-color: white;cursor: pointer;">Online Exclusives</button>
+            
+            <div class="dropdown1-content">                
+                <div style="list-style: none; text-align: center;background-color: white;line-height: 30px;border: 2px solid black;">
+                <img style="width: 250px;height: 130px;" src="royals.png" alt="living room">
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture">Living Room Furniture</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/sofas">Sofas</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/sofa-cum-beds">Sofa Cum Beds</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/loungers">Loungers</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/recliners">Recliners</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/accent-chairs">Accent Chairs</a></li> 
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/benches">Benches</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/folding-chairs">Folding Chairs</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/bean-bags">Bean Bags</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/center-tables">Center Tables</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/end-tables">End Tables</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/console-tables">Console Tables</a></li>
+                </div>
+                
+            </div>
+            </ul>
+       </div>     
+
+       <div><button style="font-size: 1.5vw;border: none;background-color: white;padding-left: 45px;padding-top: 17px;cursor: pointer;">Home Packages</button></div>
+
+       <div class="dropdown1">
+        <ul>
+        <button style="font-size: 1.5vw;border: none;background-color: white;padding-left: 10px;cursor: pointer;">Furniture</button>
+        <div class="dropdown1-content">
+        <div style=" list-style-type: none;text-align: center;padding: 10px;background-color: white;line-height: 30px;border: 2px solid black;">
+        <img style="width: 150px;" src="sofs.png" alt="furniture">
+        <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="">Super Savings Sofa Sale</a></li>
+        <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="">Sofa Sets</a></li>
+        <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="">Three Seater Sofas</a></li>
+        <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="">Two Seater Sofas</a></li>
+        <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="">Single Seater Sofas</a></li>
+        </div>
+        </div>
+        </ul>
+        </div>
+
+
+        <div class="dropdown1">
+            <ul>
+            <button style="font-size: 1.5vw;border: none;background-color: white;padding-left: 10px;cursor: pointer;">Home Decor</button>
+            <div class="dropdown1-content">
+            <div style=" list-style-type: none;text-align: center;padding: 10px;background-color: white;line-height: 30px;">
+            <img style="width: 250px;" src="hme.png" alt="furniture">
+            <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-decor/idols-figurines">Idols & Figurines</a></li>
+            <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-decor/clocks">clocks</a></li>
+            <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-decor/candles-fragrances">Candles And Fragrances</a></li>
+            <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-decor/votives--candle-holders-k">Votives And Candle Holders</a></li>
+            <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-decor/wall-decor">Wall Decor</a></li>
+            <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-decor/mirrors">Mirrors</a></li>
+            <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-decor/table-decor">Table Decor</a></li>
+            <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-decor/vases-flowers">Vases Flower</a></li>
+            <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-decor/garden">Garden</a></li>
+            <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-decor/lamps-lighting">Lamps Lighting</a></li>
+            </div>
+            </div>
+            </ul>
+            </div>
+
+            <div class="dropdown1">
+                <ul>
+                <button style="font-size: 1.5vw;border: none;background-color: white;padding-left: 10px;cursor: pointer;">Home Furnishings</button>
+                <div class="dropdown1-content">
+                <div style=" list-style-type: none;text-align: center;padding: 10px;background-color: white;line-height: 30px;">
+                <img style="width: 250px;" src="ho-removebg-preview.png" alt="furniture">
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-furnishings/bedding">Bedding</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-furnishings/pillows">Pillows</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-furnishings/protectors">Prtectors</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-furnishings/covers-inserts">Covers Inserts</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-furnishings/curtains">Curtains</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-furnishings/mats-rugs">Mats Rugs/a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-furnishings/bath-linens">Bath Linens</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-furnishings/bath-accessory">Bath Accessory</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-furnishings/home-furnishing-brands">Brands</a></li>
+                <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/home-furnishings/home-furnishings-essentials">Essentials</a></li>
+                </div>
+                </div>
+                </ul>
+                </div>
+      
+                <div><a href="https://www.hometown.in/modular-kitchens">
+                    <button style="font-size: 1.5vw;border: none;background-color: white;padding-left: 45px;padding-top: 17px;cursor: pointer;">Modular Kitchens</button>
+                    </a>
+                </div>
+
+
+                <div class="dropdown1">
+                    <ul>
+                    <button style="font-size: 1.5vw;border: none;background-color: white;padding-left:10px;cursor: pointer;">More</button>
+                    <div class="dropdown1-content">
+                    <div style=" list-style-type: none;text-align: center;padding: 10px;background-color: white;line-height: 30px;">
+                    <img style="width: 150px;" src="more.jpg" alt="more">
+                    <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/gifts">Gifting Idea</a></li>
+                    <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/clearance-sale">Clearance Sale</a></li>
+                    <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/design-build">Design And Build</a></li>
+                    <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/flipBook">Festive Catalog</a></li>
+                    <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://blog.hometown.in/">Home Town Blog</a></li>
+                    <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/bulk-order">Bulk order</a></li>
+                    <li><a style="text-decoration: none;color: black;font-weight: bolder;" href="https://www.hometown.in/reviews">Reviews</a></li>                  
+                    </div>
+                    </div>
+                    </ul>
+                    </div>
+                
+
+        </div>
+
+
+
+
+
+
+
+        <div class="main">
+
+            <div class="hovers" style="display: inline;"> 
+                <a href="https://www.hometown.in/furniture/new-arrival"">
+                <div class="relative3" >
+                    <img style="width: 98%;border: 2px solid black;" src="good-deals2.jpg" alt="deals">
+                    <div class="absolute3">
+                        <a href="https://www.hometown.in/furniture/new-arrival">Shop velvet sofas</a>
+                    </div>
+
+                    <h1 style="text-align: center;padding-top: 6%; font-size: 4vw;color: rgb(0, 0, 0);">Newly Arrived</h1>
+               
+                <div class="relative2" >
+                    <a href="https://www.hometown.in/furniture">
+                    <img style="width: 70%;padding-bottom: 5%;padding-left: 15%; "src="good-deals1.jpg" alt="deals"></a>
+                    <div class="absolute2">
+                        <a href="https://www.hometown.in/furniture">shop now</a>
+                    </div>
+                </div>
+                </div>
+            </a>
+                
+            </div>
+
+        
+            
+            <div class="relative">
+            <h1 class="pseudo-element" style="cursor:default; text-align: center;padding-top: 20px;color: rgb(3, 3, 3);font-family:'Times New Roman', Times, serif;font-size: 4vw;text-shadow:2px 5px 10px rgba(104, 81, 7, 0.925); ;">Refresh Your Living Room <br> With Vibrant Hues</h1>
+            <div class="hovers"><a style="text-decoration: none;" href="https://www.hometown.in/home-furnishings"></a>
+            <img style="width:90%;border:30px groove rgb(139, 48, 12);padding-left: 5%;" src="milion.jpg" alt="milan">
+            <div class="absolute">
+                <a href="https://www.hometown.in/home-furnishings">Shop Home Furnishings</a>
+            </div>
+            </div>
+        </a>
+        </div>
+
+        <div class="hovers" style="display: flex;background-color:rgb(169, 255, 251);width: 95%;margin-top: 5%;padding-left: 4%;">
+            <a href="https://www.hometown.in/hot-deals/furniture-deals">
+                <div class="relative1">
+                <img style="width:100%;padding-top: 2%;" src="good-deals.jpg" alt="deals">
+                <div class="absolute1">
+                   <a href="https://www.hometown.in/hot-deals/furniture-deals">Shop Now</a> 
+                </div>
+            </div>
+            
+            <div class="rotate"> 
+            <a style="text-decoration: none;" href="https://www.hometown.in/hot-deals/furniture-deals">
+            <h1  style="padding-left: 13%; color:rgb(0, 0, 0);font-family:'Times New Roman', Times, serif;font-size: 6vw;">TOO GOOD DEALS!</h1>
+            </a>
+            </div></a>
+        </div>
+
+        
+       
+
+        <div class="signup">
+        <a href="https://www.hometown.in/signup/?redirect=/">
+        <img style="width: 70%;padding: 5% 15%;" src="Sign-up-banner.png" alt="sign up">
+        </a>
+        </div>
+
+        <div style="text-align: center;">
+            <h1>Shop By Categories</h1>
+        </div>
+
+        <div class="ho" style="display:flex; padding:25px 30px">
+            
+            <div style="background-color: gainsboro;width: 16%;height: 20%;margin-left: 1%;">
+            <img src="furnit.png" alt="furniture">
+            <a style="text-decoration: none;padding-left: 28%;font-size: 1.8vw;color: black;" href="https://www.hometown.in/furniture">Furniture</a>
+            </div> &nbsp;
+            
+            
+            <div style="background-color: gainsboro;width: 16%;height: 20%;">
+            <img src="sofaa.png" alt="sofa">
+            <a style="text-decoration: none;padding-left: 37%;font-size: 1.8vw;color: black;" href="https://www.hometown.in/furniture/living-room-furniture/sofas">Sofas</a>
+            </div>&nbsp;
+           
+           
+            <div style="background-color: gainsboro;width: 16%;height: 20%;">
+            <img src="recliners.png" alt="recliners">
+            <a style="text-decoration: none;padding-left: 28%;font-size: 1.8vw;color: black;" href="https://www.hometown.in/furniture/living-room-furniture/recliners">Recliners</a>
+            </div>&nbsp;
+           
+            <div style="background-color: gainsboro;width: 16%;height: 20%;">
+            <img src="dinindset.png" alt="diningsets">
+            <a style="text-decoration: none;padding-left: 20%;font-size: 1.8vw;color: black;" href="https://www.hometown.in/furniture/dining-kitchen-furniture/dining-sets">Dining Sets</a>
+            </div>&nbsp;
+            
+            <div style="background-color: gainsboro;width: 16%;height: 20%;">
+            <img src="beds.png" alt="beds">
+            <a style="text-decoration: none;padding-left: 36%;font-size: 1.8vw;color: black;" href="https://www.hometown.in/furniture/bedroom-furniture/beds">Beds</a>
+            </div>&nbsp;
+            
+            <div style="background-color: gainsboro;width: 16%;">
+            <img style="width: 90%;padding-left: 5%;" src="wardrbes.png" alt="wardrobes">
+            <a style="text-decoration: none;padding-left: 30%;font-size: 1.8vw;color: black;" href="https://www.hometown.in/furniture/bedroom-furniture/wardrobes">wardrobes</a>
+            </div>
+    </div>
+
+    <div style="padding-top: 5%;">
+        <h1 class="pseudo-element" style="padding-left: 22%;font-size: 5vw;color: rgb(56, 40, 4);">Our Bestsellers Are Back</h1>
+            <div  style="padding-top: 5%;padding-bottom: 5%;" class="instock">
+            <a href="https://www.hometown.in/furniture/shoe-racks">
+            <img  style="width: 80%;padding-left: 10%;" src="back in stock.jpg" alt="in stock">
+            </a>
+            </div>
+    </div>
+
+
+    <div style="background-color: rgb(250, 245, 230);">
+        <h1 class="pseudo-element" style="font-size: 4vw;color: rgb(56, 40, 4);padding-left: 40%;padding-top: 2%;">Shop By Room</h1>
+        
+    <div style="display: flex;width: 100%;">
+        <div>
+            <div class="ho">
+        <a style="text-decoration: none;color: black;" href="https://www.hometown.in/furniture/living-room-furniture">
+        <img style="width: 78%;padding-left: 10%;padding-top: 2%;" src="livingroom.jpg" alt="livingroom">
+        <h3 class="pseudo-element" style="padding-left: 5%;"><span style="font-size: 4vw;color: rgb(56, 40, 4);">Living Room</span> <br>From classic neutrals to chic mordern,our living room furniture
+            collection something for everyone home.Shop sofas,recliners,
+            coffee tables,end tables,media units,ottomans and much more<br><span style="color: black;font-weight: bold;">KNOW MORE-</span></h3>
+        </a><br><br><br></div>
+        <hr>
+        <div class="ho">
+        <a style="text-decoration: none;color: black;" href="https://www.hometown.in/furniture/bedroom-furniture">
+            <img style="width: 78%;padding-left: 10%;padding-top: 2%;" src="bedroom.jpg" alt="bedroom">
+            <h3 class="pseudo-element" style="padding-left: 5%;padding-bottom: 2%;"><span style="font-size: 4vw;color: rgb(56, 40, 4);">Bedroom</span> <br>Grand master suites to cosy sleep rooms, our bedroom furniture collection in classic, contemporary or modern designs make for a perfect sleep haven. Shop beds, wardrobes, dressers, night stands and much more.<br><span style="color: black;font-weight: bold;">KNOW MORE-</span></h3>
+            </a>
+        </div>
+
+        
+            
+        </div>
+    
+        <div>
+            <div class="ho">
+            <a style="text-decoration: none;color: black;" href="https://www.hometown.in/furniture/dining-kitchen-furniture">
+            <img style="width: 68%;padding-left: 10%;padding-top: 2%;" src="diningroom.jpg" alt="diningroom">
+            <p class="pseudo-element" style="padding-left: 10%;padding-bottom: 2%;"><span style="font-size: 3vw;color: rgb(56, 40, 4);">Dining</span> <br>Casual get-togethers or intimate soirees our dining room furniture collection has the perfect pieces to make 
+            every moment into memorable one.Shop dining room set,dining chair,bar stool,sideboard trolley <br> <span style="color: black;font-weight: bold;">KNOW MORE-</span> </p>
+            </a></div>
+        <hr>
+            <div class="ho">
+            <a style="text-decoration: none; color: black;" href="https://www.hometown.in/furniture/study-office-furniture">
+            <img style="width: 70%;padding-top: 5%;padding-left: 10%;" src="homeoffice.jpg" alt="homeoffice">
+            <p class="pseudo-element" style="padding-left: 10%;padding-bottom: 2%;"><span style="font-size: 3vw;color: rgb(56, 40, 4);">Home Office</span> <br>Formal study or cozy work area, create a space you'll love to work in. Shop study table, office chairs, filling storage cabinets and book shelves<br><span style="color: black;font-weight: bold;">KNOW MORE-</span></p>
+            </a></div>
+        <hr>
+        <div class="ho">
+            <a style="text-decoration: none; color: black;" href="https://www.hometown.in/furniture/kids-furniture">
+            <img style="width: 70%;padding-top: 5%;padding-left: 10%;" src="kidsroom.jpg" alt="kidsroom">
+            <p class="pseudo-element" style="padding-left: 10%;padding-bottom: 2%;"><span style="font-size: 3vw;color: rgb(56, 40, 4);">Kids Room</span> <br>Girl bedrooms or boy bedrooms, our kids furniture range is perfect to fuel their imagination and compliment their personalities. Shop bunked beds, themed bedroom sets, study desk, book shelves and much more<br><span style="color: black;font-weight: bold;">KNOW MORE-</span></p>
+            </a></div>
+        </div>
+   </div>
+
+</div>
+
+
+<h1 class="pseudo-element" style="font-size: 4vw;color: rgb(56, 40, 4);padding-left: 35%;padding-top: 2%;">Deals Of The Day</h1>
+<div class="backimg" style="padding-top: 6%;padding-left: 10%;">
+    
+    <div style="text-align: center;" class="ho">
+        <a style="text-decoration: none;color: black;" href="https://www.hometown.in/Crony-Engineered-Wood-Medium-Book-Shelf-in-Wenge-Colour/sku/HO340CA72APRHTFUR">
+            <img style="padding:10px 16px; width: 90%;" src="dealoftheday.jpg" alt="deals">
+        
+        
+        <div style="text-align: justify;padding-left: 20px;">
+            <h3>Crony Engineered Wood Medium Book Shelf in <br> Wenge Colour</h3>
+            <p style="font-weight: bold;color: rgb(110, 110, 110);">By HomeTown</p>
+            <span style="font-weight: bold;">Price: ₹3,999</span> &nbsp; <span style="text-decoration:line-through;color: rgb(110, 110, 110);"> ₹7,900 </span> &nbsp; <span style="color: red;font-weight: bold;">49%Off</span>
+            <br><br><span style="font-weight: bold;">Shop Now-</span>
+        </div></a><br>
+    </div> 
+
+        <div style="text-align: center;" class="ho">
+          <a style="text-decoration: none;color: black;" href="https://www.hometown.in/Cyra-Engineered-Wood-Shoe-Rack-in-Wenge-Colour/sku/HO340SS51AUIHTFUR">
+            <img style="padding:10px 50px;width: 85%;height: 69.5%;" src="dealoftheday1.jpg" alt="deals">
+            <div style="text-align: justify;padding-left: 50px;">
+            <h3>Cyra Engineered Wood Shoe Rack in Wenge Colour</h3>
+            <p style="font-weight: bold;color: rgb(110, 110, 110);">By HomeTown</p>
+            <span style="font-weight: bold;">Price: ₹6,499</span> &nbsp;<span style="text-decoration:line-through;color: rgb(110, 110, 110);"> ₹14,900</span> &nbsp; <span style="color: red;font-weight: bold;">56%Off</span>
+            <br><br><span style="font-weight: bold;">Shop Now-</span>
+          </div> </a>
+        </div>
+</div>
+
+<div>
+    <div style="padding-left: 30%;padding-top: 5%;">
+    <h1 class="pseudo-element" style="font-size: 4vw;color: rgb(56, 40, 4);">Best Seat In The House</h1>
+        <a style="text-decoration: none;color: black;" href="https://www.hometown.in/furniture/living-room-furniture/recliners"> <h3 style="padding-left: 10%;">SHOP SOFAS AND RECLINERSArrow-</h3></a>
+    </div>
+    <div class="ho" style="padding-left: 1%;">
+       <a href="https://www.hometown.in/furniture/living-room-furniture/recliners"> <img src="sofa1.jpg" alt="sofas" width="99%"></a>
+    </div>
+</div>
+
+<div>
+    <h1 class="pseudo-element" style="font-size: 4vw;padding-left: 35%;padding-top: 6%;">Get The Look</h1>
+<div style="display: flex;width: 100%;background-color: rgba(255, 255, 231, 0.829);">
+        
+    <div class="ho" style="text-align: center;padding-top: 5%;" >
+        <a href="https://www.hometown.in/William-Half-Leather-3-Seater-Recliner-in-Brown-Colour/sku/HO340SO97AWKHTFUR"><img src="william3.jpg" alt="3seater" width="80%" height="80%"></a>
+        <div style="text-decoration: none;color: black;font-weight: bold;font-size: 1.3vw;padding-top: 5%;"> William Half Leather 3 Seater Recliner <br> in Brown Colour
+        </div>
+    </div>
+        
+    <div class="ho" style="text-align: center;padding-top: 5%;">
+        <a href="https://www.hometown.in/William-Half-Leather-2-Seater-Sofa-in-Brown-Colour/sku/HO340SO96AWLHTFUR"><img src="william2.jpg" alt="2seater" width="80%" height="80%"></a>
+        <div style="text-decoration: none;color: black;font-weight: bold; font-size: 1.3vw;padding-top: 5%;">
+            William Half Leather 2 Seater Recliner <br> in Brown Colour
+        </div>
+    </div>
+        
+    <div class="ho" style="text-align: center;padding-top: 5%;">
+        <a href="https://www.hometown.in/William-Half-Leather-Recliner-in-Brown-Colour/sku/HO340SO95AWMHTFUR"><img src="william1.jpg" alt="1seater" width="80%" height="80%"></a>
+        <div style="text-decoration: none;color: black;font-weight: bold; font-size: 1.3vw;padding-top: 5%;">
+            William Half Leather Seater Recliner <br> in Brown Colour
+        </div>
+    </div>
+    
+</div>
+</div>
+
+<div >
+    <h1 class="pseudo-element" style="font-size: 4vw;padding-left: 33%;padding-top: 2%;">Style Your Home</h1>
+</div>
+<div >   
+    <div style="padding-top: 5%;padding-bottom: 5%;text-align: center;" class="overhover">
+        <a id="hover" href="https://www.hometown.in/home-decor/vases-flowers"><img src="divs1.png" alt="1"></a>
+        <a id="hover" href="https://www.hometown.in/home-decor/idols-figurines/figurines"><img src="divs2.png" alt="2"></a>
+        <a id="hover" href="https://www.hometown.in/home-decor/garden/garden-fountains-k"><img src="divs3.png" alt="3"></a>
+    </div>
+
+    <div style="text-align: center;padding-top: 5%;padding-bottom: 5%;" class="overhover">
+        <a id="hover" href="https://www.hometown.in/home-decor/garden"><img src="divs4.png" alt="4"></a>
+        <a id="hover" href="https://www.hometown.in/home-furnishings/covers-inserts"><img src="divs5.png" alt="5"></a>
+        <a id="hover" href="https://www.hometown.in/home-furnishings/curtains"><img src="divs6.png" alt="6"></a>
+    </div>
+
+    <div style="text-align: center;padding-top: 5%;padding-bottom: 5%;" class="overhover">
+        <a id="hover" href="https://www.hometown.in/home-furnishings/bedding"><img src="divs7.png" alt="7"></a>
+        <a id="hover" href="https://www.hometown.in/home-furnishings/pillows"><img src="divs8.png" alt="8"></a>
+        <a id="hover" href="https://www.hometown.in/tableware-kitchenware/crockery-h"><img src="divs9.png" alt="9"></a>
+    </div>
+
+    <div style="text-align: center;padding-top: 5%;padding-bottom: 5%;" class="overhover">
+        <a id="hover" href="https://www.hometown.in/tableware-kitchenware/drinkware-h"><img src="divs10.png" alt="10"></a>
+        <a id="hover" href="https://www.hometown.in/tableware-kitchenware/cookware-h"><img src="divs12.png" alt="12"></a>
+        <a id="hover" href="https://www.hometown.in/tableware-kitchenware/foodstorage"><img src="divs11.png" alt="11"></a>
+    </div>
+</div>
+
+
+    <div style="text-align: center; padding-top: 8%;">
+        <div style="background-color: rgb(233, 255, 182);padding: 5% 5%;">
+        <a id="hover" href="https://www.hometown.in/home-decor/garden/garden-fountains-k"><img src="bhamas.jpg" alt="bahamas" width="77.5%"></a>
+        </div>
+        
+        <div style="background-color: lavenderblush;padding-bottom: 5%;padding-top: 5%;margin-top: 5%;">
+        <a id="hover" href="https://www.hometown.in/tableware-kitchenware/crockery-h/dinnerset"><img  src="silk route.jpg" alt="silk" width="77.5%"></a>
+        </div>
+
+        <div style="background-color: rgb(221, 255, 229);padding-bottom: 5%;padding-top: 5%;margin-top: 5%;">
+        <a id="hover" href="https://www.hometown.in/home-furnishings/bedding"><img style="padding-top: 5%;" src="manhattan.jpg" alt="manhattan" width="77.5%"></a>
+        </div>
+
+        <div style="background-color: rgb(170, 242, 255);padding-bottom: 5%;padding-top: 5%;margin-top: 5%;">
+        <a id="hover" href="https://www.hometown.in/tableware-kitchenware"><img src="clockware.jpg" alt="clockware" width="77.5%"></a>
+        </div>
+    
+    </div>
+
+
+    <div>
+        <h1 class="pseudo-element" style="font-size: 4vw;padding-left: 30%;padding-top: 2%;"> Gift For Every Reason</h1>
+        <h3 style="text-align: center;font-size: 2vw;color: rgb(109, 108, 108);padding-left: 3%;">Shop gifting ideas for everyone on your list.</h3>
+            <h3 style="padding-left: 43%;">SHOP GIFTINGArrow </h3>
+    </div>
+
+    <div style="display: flex;padding-left: 2%;padding-top: 5%;padding-bottom: 5%; background-color: rgb(255, 232, 243);">
+        <div  style="text-align: center;">
+        <a href="https://www.hometown.in/gifts"><img class="ho" style="width: 80%;" src="perfect.jpg" alt="perfect"></a>
+        </div>
+        <div style="text-align: center;">
+        <a href="https://www.hometown.in/gifts"><img class="ho" style="width: 80%;" src="perfect1.jpg" alt="perfect1"></a>
+        </div>
+    </div>
+
+    <div style="padding-top: 2%;">
+        <h1 class="pseudo-element" style="font-size: 4vw;padding-left: 30%;padding-top: 2%;">Together In The Moment</h1>
+        <h3 style="text-align: center;font-size: 2vw;color: rgb(109, 108, 108);padding-left: 3%;">SHOP DINING SETSArrow</h3>
+        <div  style="padding-top: 5%;padding-bottom: 5%;" class="ho">
+        <a href="https://www.hometown.in/furniture/dining-kitchen-furniture/dining-sets"><img  style="width: 90%;padding-left: 5%;" src="d-set.jpg" alt="dining set"></a>
+        </div>
+    </div>
+
+    <div style="display: flex; padding-left: 2%;padding-top: 5%;background-color: rgb(252, 255, 241);">
+        <div style="text-align: center;" class="ho">
+            <a  href="https://www.hometown.in/tableware-kitchenware">
+            <img  style="width: 85%;padding-bottom: 2%;" src="cups.jpg" alt="cups">
+            </a>
+        </div>
+
+        <div style="text-align: center;" class="ho">
+            <h2 style="padding-left: 5%;font-size: 3vw;">The Way We're <br>
+            Entertaining Now</h2>
+           <h3 style="padding-left: 10%;">SHOP TABLEWAREArrow</h3>
+           <a href="https://www.hometown.in/tableware-kitchenware">
+            <img  style="width: 70%;height: 65%;" src="glass.jpg" alt="glass">
+           </a>
+        </div>
+    
+    </div>
+
+
+    <div  class="ho">
+        <h1 class="pseudo-element" style="font-size: 4vw;padding-left: 15%;padding-top: 2%;">Shop Our New Arrivals In Furniture</h1>
+        <a href="https://www.hometown.in/furniture/new-arrival"><img style="width: 90%;padding-left: 5%;" src="justarrived.jpg" alt="arrived"></a>
+    </div>
+
+    <div>
+        <h1 class="pseudo-element" style="font-size: 4vw;padding-left: 25%;padding-top: 2%;">WFH Favourites Are Back</h1>
+        <h3 style="padding-left: 38%;">Desks and Chairs are ready to ship.</h3>
+
+        <div style="display: flex;padding: 20px 50px;">
+            <div  style="padding-top: 5%;padding-bottom: 5%;" class="ho"> 
+            <a  href="https://www.hometown.in/furniture/study-office-furniture"><img style="width: 80%; padding-left: 12%;" src="office1.jpg" alt=""></a>
+            </div>
+            <div  style="padding-top: 5%;padding-bottom: 5%;" class="ho">
+            <a href="https://www.hometown.in/furniture/study-office-furniture/office-chairs"><img style="width: 80%; padding-left: 8%;" src="office2.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="pseudo-element" style="font-size: 4vw;padding-left: 10%;">Trends We Love</h1>
+        <div class="ho" style="padding-top: 5%;padding-bottom: 5%;background-color: honeydew;" >
+        <a href="https://www.hometown.in/home-decor/trends/bahama-luxe"><img style="width: 80%; padding-left: 10%;" src="pillows.jpg" alt="pillows"></a>
+        </div>
+       
+        <div class="ho" style="padding-top: 5%;padding-bottom: 5%;background-color:rgb(255, 249, 249);margin-top: 5%;">
+        <a href="https://www.hometown.in/home-decor/trends/manhattan-chic"><img style="width: 80%; padding-left: 10%;" src="manhattan1.jpg" alt="manhattan"></a>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="pseudo-element" style="font-size: 4vw;text-align: center;">For Your Master Suite</h1>
+        <h3 style="text-align: center;">Shop BedRooms -</h3>
+        <a href="https://www.hometown.in/furniture/bedroom-furniture"><img class="ho" style="width: 80%;padding-left: 10%;" src="master.jpg" alt="beds"></a>
+    </div>
+
+    <div>
+        <h1 class="pseudo-element" style="font-size: 4vw;text-align: center;">Get The Look</h1>
+    </div>
+
+<div style="display: flex;width: 92%;padding-left: 8%;background-color: rgb(218, 255, 244);padding-top: 5%;padding-bottom: 2%;">    
+    
+    <div style="width: 32%;" class="hovers">
+        <a style="text-decoration: none; color: black;" href="https://www.hometown.in/casablanca-solidwood-4-door-wardrobe-in-walnut-colour/sku/HO340WA12BHJHTFUR">
+            <img src="4door.jpg" alt="door" width="80%">
+            <p style="font-size: larger;">Casablanca Solidwood 4 door wardrobe <br>  in Walnut Colour</p>
+        </a>
+    </div>
+
+    <div style="width: 32%;" class="hovers">
+        <a style="text-decoration: none; color: black;" href="https://www.hometown.in/casablanca-solidwood-dresser-with-mirror-in-walnut-colour/sku/HO340FU61GZMHTFUR">
+            <img src="mirrortable.jpg" alt="table" width="80%">
+            <p style="font-size: larger;">Casablanca Solidwood Dresser with <br> mirror in Walnut Colour</p>
+        </a>
+    </div>
+
+    <div style="width: 32%;" class="hovers">
+        <a style="text-decoration: none; color: black;" href="">
+        <img src="standin.jpg" alt="standin" width="80%">
+            <p style="font-size: larger;">Casablanca Solidwood Night Stand in <br> Walnut Colour</p>
+        </a>
+    </div>
+</div>
+
+</div>
+
+<div>
+    <div style="background-color: rgb(255, 236, 244);padding: 2% 3%;">
+    <h1 class="pseudo-element" style="font-size: 4vw;text-align: center;">For A Better Sleep</h1>
+    <img style="padding-left:8%" src="sleep.jpg" alt="pillows" width="85%">
+    <div style="border: 2px solid black;background-color: azure;padding-left: 13%;padding-top: 5%;padding-bottom: 5%;">
+       
+            <a class="ho" href="https://www.hometown.in/home-furnishings/pillows"><img src="mat2.png" alt="pillow" width="20%"></a>
+            <a class="ho" href="https://www.hometown.in/furniture/mattresses"><img style="margin-left: 2%;" src="mat1.png" alt="mat" width="20%"></a>        
+            <a class="ho" href="https://www.hometown.in/home-furnishings/bedding/comforters"><img style="margin-left: 2%;" src="mat3.png" alt="bedsheet" width="20%"></a>
+            <a class="ho" href="https://www.hometown.in/home-furnishings/protectors/mattress-protectors"><img style="margin-left: 2%;" src="mat4.png" alt="matpro" width="20%"></a>
+    </div>
+    
+    </div>
+</div>
+
+<div style="width: 60%;padding-left: 10%;padding-top: 3%;">
+    <div style="border: 2px solid black; border-right: 0.5px solid rgb(228, 228, 228); padding-left: 10%;">
+    <h1 class="pseudo-element" style="font-size: 3vw;text-align: center;">Customise Your Home With Us</h1>
+    
+    <div style="padding-top: 3%;padding-left: 4%;">
+        <a class="ho" href="https://www.hometown.in/design-build">
+            <img style="width:142%;" src="build.jpg" alt="design">
+        </a>
+        </div>
+    
+    <div>
+    <a class="ho" href="https://www.hometown.in/modular-kitchens">
+        <img style="width: 120%;" src="modular1.jpg" alt="modular-kitchens">
+    </a>
+    </div>
+    
+    </div>
+
+</div>
+<br><br>
+<div style="background-color: rgb(240,240,240);text-align: center;padding-top: 2%;padding-bottom: 2%;">
+    <h1>Bank Offers</h1>
+    <a class="ho" href="https://www.hometown.in/promotions">
+    <img src="bank1.png" alt="bank">
+    </a>
+</div>
+<br><br><br>
+<div style="display: flex;padding-left:6%; padding-top: 5%;background-color: rgb(240, 240, 240);">
+    
+    <ul style="line-height: 180%;">
+        <button style="font-size: 1.5vw;border: none;background-color:rgb(240, 240, 240);cursor: pointer;width: max-content;color:  rgb(43, 43, 43);font-weight: bolder;">Online Exclusives</button>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture">Living Room Furniture</a></li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/sofas">Sofas</a></li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/sofa-cum-beds">Sofa Cum Beds</a></li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/loungers">Loungers</a></li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/recliners">Recliners</a></li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/accent-chairs">Accent Chairs</a></li> 
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/benches">Benches</a></li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/folding-chairs">Folding Chairs</a></li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/bean-bags">Bean Bags</a></li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/center-tables">Center Tables</a></li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/end-tables">End Tables</a></li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/furniture/living-room-furniture/console-tables">Console Tables</a></li>       
+        </ul>
+
+
+        <ul style="line-height: 180%;">
+            <button style="font-size: 1.5vw;font-weight: bolder; border: none;background-color:rgb(240, 240, 240);color: rgb(43, 43, 43); cursor: pointer;">Furniture</button>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="">Super Savings Sofa Sale</a></li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="">Sofa Sets</a></li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="">Three Seater Sofas</a></li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="">Two Seater Sofas</a></li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="">Single Seater Sofas</a></li>            
+            </ul>
+
+            <ul style="line-height: 180%;">
+                <button style="font-size: 1.5vw;font-weight: bolder; border: none;background-color:rgb(240, 240, 240);color: rgb(43, 43, 43); cursor: pointer;">Home Decor</button>
+                
+                <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-decor/idols-figurines">Idols & Figurines</a></li>
+                <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-decor/clocks">clocks</a></li>
+                <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-decor/candles-fragrances">Candles And Fragrances</a></li>
+                <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-decor/votives--candle-holders-k">Votives And Candle Holders</a></li>
+                <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-decor/wall-decor">Wall Decor</a></li>
+                <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-decor/mirrors">Mirrors</a></li>
+                <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-decor/table-decor">Table Decor</a></li>
+                <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-decor/vases-flowers">Vases Flower</a></li>
+                <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-decor/garden">Garden</a></li>
+                <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-decor/lamps-lighting">Lamps Lighting</a></li>
+                </ul>
+
+                <ul style="line-height: 180%;">
+                    <button style="font-size: 1.5vw;font-weight: bolder; border: none;background-color: rgb(240, 240, 240);color: rgb(43, 43 ,43); cursor: pointer;">Home Furnishings</button>
+                    
+                    <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-furnishings/bedding">Bedding</a></li>
+                    <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-furnishings/pillows">Pillows</a></li>
+                    <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-furnishings/protectors">Prtectors</a></li>
+                    <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-furnishings/covers-inserts">Covers Inserts</a></li>
+                    <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-furnishings/curtains">Curtains</a></li>
+                    <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-furnishings/mats-rugs">Mats Rugs/a></li>
+                    <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-furnishings/bath-linens">Bath Linens</a></li>
+                    <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-furnishings/bath-accessory">Bath Accessory</a></li>
+                    <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-furnishings/home-furnishing-brands">Brands</a></li>
+                    <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/home-furnishings/home-furnishings-essentials">Essentials</a></li>                   
+                    </ul>
+   
+                    <ul style="line-height: 180%;">
+                        <button style="font-size: 1.5vw;font-weight: bolder; border: none;background-color:rgb(240, 240, 240);color: rgb(43, 43, 43); cursor: pointer;">More</button>
+                        
+                        <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/gifts">Gifting Idea</a></li>
+                        <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/clearance-sale">Clearance Sale</a></li>
+                        <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/design-build">Design And Build</a></li>
+                        <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/flipBook">Festive Catalog</a></li>
+                        <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://blog.hometown.in/">Home Town Blog</a></li>
+                        <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/bulk-order">Bulk order</a></li>
+                        <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/reviews">Reviews</a></li>                                         
+                        </ul>
+</div>
+
+<div style="display: flex;padding-left:4%; padding-top: 5%;background-color: rgb(240, 240, 240);">
+
+        <ul style="line-height: 180%;">
+            <button style="font-size: 1.5vw;font-weight: bolder; border: none;background-color:rgb(240, 240, 240);color: rgb(43, 43, 43); cursor: pointer;">CUSTOMER SERVICE</button>
+
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/track-order">Track Order</li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/return-policy">Returns</li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/cancellation">Cancellation</li>    
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/faq">FAQ</li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/privacy-policy">Privacy Policy</li>                
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/terms-and-conditions">Terms and Conditions</li>
+
+            <button style="font-size: 1.5vw;font-weight: bolder; border: none;background-color:rgb(240, 240, 240);color: rgb(43, 43, 43); cursor: pointer;padding-top: 10%;">ABOUT US</button>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/who-we-are">Who We Are</li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.praxisretail.in/careers.html">Careers</li>
+            <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/contact-us">Contact Us</li>
+
+        
+        </ul>
+        
+       <ul style="line-height: 180%;padding-left: 8%;">
+        <button style="font-size: 1.5vw;font-weight: bolder; border: none;background-color:rgb(240, 240, 240);color: rgb(43, 43, 43); cursor: pointer;">USEFUL LINKS</button>
+
+        <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/sitemap.html">sitemap</li>
+        <li style="list-style-type: none;"><a style="text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/promotions">promotions</li>     
+       </ul> 
+    
+       <ul style="line-height: 180%;padding-left: 8%;">
+        <button style="font-size: 1.5vw;font-weight: bolder; border: none;background-color:rgb(240, 240, 240);color: rgb(43, 43, 43); cursor: pointer;">CONTACT US</button>
+        
+         
+        <li style="list-style-type: none;"><a style=" text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="tel:1800-210-0004"> 1800-210-0004</li>
+        <li style="list-style-type: none;"><a style=" text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="care@hometown.in"> care@hometown.in</li>
+        <li style="list-style-type: none;"><a style=" text-decoration: none;color: rgb(80, 80, 80);font-weight: bolder;" href="https://www.hometown.in/store-locator">Store Locator</li>
+       
+        <button style="padding-top: 65%; font-size: 1.5vw;font-weight: bolder; border: none;background-color:rgb(240, 240, 240);color: rgb(43, 43, 43); cursor: pointer;">OUR APP</button>
+        <li style="list-style-type: none;"><img src="g_play.svg" alt="play" width="90%"></li>
+        </ul>
+    
+        <div style="padding-left: 8%;">
+        <ul>
+            <li style="list-style-type: none;"> <hr>--------Subscribe Newsletter-------- <hr> </li>
+            <li style="list-style-type: none;"><input style="width: 70%;height: 35px; border: 2px solid black; background-color: rgb(240, 240, 240);" type="search" name="search" id="" placeholder="Enter your email address"></li>
+            <a href=""><img style="padding-top: 5%;" src="subs.png" alt="subscribe"></a>
+        </ul>
+        
+        <ul style="line-height: 10px;">
+            <li class="oho" style="padding-top: 10%;list-style-type: none;"><a href="https://www.facebook.com/hometown.in/"><img src="fb.svg" alt="facebook"></a></li>
+            <li class="oho" style="padding-top: 10%;list-style-type: none;"><a href="https://twitter.com/HomeTown_In/"><img src="tw.svg" alt="twitter"></a></li>
+            <li class="oho" style="padding-top: 10%;list-style-type: none;"><a href="https://www.youtube.com/channel/UCBZGArWnKT6MYYwOsPCNjiw"><img src="youtube.svg" alt="youtube"></a></li>
+            <li class="oho" style="padding-top: 10%;list-style-type: none;"><a href="https://www.instagram.com/hometownindia/"><img src="insta.svg" alt="insta"></a></li>
+            <li class="oho" style="padding-top: 10%;list-style-type: none;"><a href="https://in.pinterest.com/hometownstore/"><img src="pintrest.svg" alt="pin"></a></li>
+        </ul>    
+</div>
+</div>
+<div style="background-color: rgb(240, 240, 240);">
+<img style="padding-left:40%;" src="foot.png" alt="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{position: relative;width: 50%;}
+        .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+  bottom: 0;
+  height: 100%;
+}
+
+.text{text-align: center;font-size: 16px;padding:16px 32px;background-color: salmon;}
+div.gallary{border:1px solid red;}
+div.gallary:hover{border: 2px solid black;}
+div.gallary img{width: 50%;height: auto;}
+div.desc{text-align: center;font-size: 5vw;}
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float:left;
+  width: 50.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .responsive {
+    width: 3%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="image" src="ho.jpg" alt="home">
+    
+        <div class="overlay">
+            <img src="hme.png" alt="">
+
+            <div class="text">Home Town</div>
+        </div>
+    </div>
+
+
+
+
+<div class="responsive">
+    <div class="gallary">
+        <a href=""><img src="divs2.png" alt="divs"></a>
+        <div class="desc">
+            add a describtion of img
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
